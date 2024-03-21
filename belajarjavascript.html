@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script type="text/javaScript">
+        function pesan1() {
+            alert('Hallo dunia');
+        }
+
+        function pesan2(nama){
+            alert("Hallo"+nama);
+        }
+        function tampilPesan(){
+            return "Sistem Informasi UMDP";
+        }
+        function validasiUmur(){
+            let umur = parseInt(document.getElementById("umur").value);
+            
+            document.getElementById("info").innerHTML=umur;
+            if (umur >= 17){
+                document.getElementById("info").innerHTML="umur "+umur +" tahun Boleh Membuat KTP";
+            }else{
+                document.getElementById("info").innerHTML="umur "+umur +" Tahun Belum Boleh Membuat KTP";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="studi">Program Studi : Sistem Informasi</h1>
+    <script type="text/JavaScript">
+        document.write("<H1>Belajar Javascript</H1>");
+        let varA= "Budi Rahardjo";
+        document.write("Nama Penulis " +varA);
+        console.log("varA "+varA);
+        document.getElementById("studi").innerHTML = "Universitas MDP";
+        document.getElementById("studi").style.fontSize="60px";
+        document.write("<br>Metode tampilPesan() = "+tampilPesan());
+    </script>
+    
+    <button onclick="pesan1()">Tampil Pesan 1</button>
+    <button onclick="pesan2(' Dewi Soekarno')">Tampil Pesan 2</button>
+    <br />
+    
+    Validasi Umur : <input type="text" id="umur" />
+    <br />
+    <button onclick="validasiUmur()">Validasi</button>
+    <p id="info">Cek Validasi</p>
+</body>
+</html>
